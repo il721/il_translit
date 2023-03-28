@@ -1,8 +1,11 @@
+from transliterate import translit
+
+
 def input_text() -> str:
     pass
 
 
-def translit(in_text: str) -> str:
+def my_translit(in_text: str) -> str:
     pass
 
 
