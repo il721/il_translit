@@ -1,4 +1,5 @@
 from transliterate import translit
+import pyperclip as pc
 
 
 def input_text() -> str:
@@ -13,7 +14,9 @@ def my_translit(in_txt: str) -> str:
 if __name__ == '__main__':
     while True:
         in_text = input_text()
-        print(my_translit(in_text))
-        cont_exit = input("Press 'Q' to exit, any key to continue")
+        out_text = my_translit(in_text)
+        pc.copy(out_text)
+        print(out_text)
+        cont_exit = input("Press 'Q' to exit, any key to continue\n").lower()
         if cont_exit == 'q':
             break
