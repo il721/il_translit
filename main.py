@@ -3,7 +3,7 @@ from transliterate import translit
 
 def input_text() -> str:
     return input("ж-zh | ё-e | ф-f | ы-y | ю-ju | ю-ju | я-ja | й-j | ш-sh | щ-sch | х-h | э-e |"
-                 " ч-ch | ь-'\nType your text tnd press 'Enter'\n--> ")
+                 " ч-ch | ь-'\nType your text tnd press 'Enter':\n ")
 
 
 def my_translit(in_txt: str) -> str:
@@ -11,11 +11,9 @@ def my_translit(in_txt: str) -> str:
 
 
 if __name__ == '__main__':
-    in_text = input_text()
-    print(my_translit(in_text))
-    # ttt = 'жёфыююяйшщхэчьъ'
-    # for _ in ttt:
-    #     print(f'{_}-{translit(_, "ru", reversed=True)}', end=' | ')
-    # ttte = 'zhopa fil\'my zhan-ljuk Godar'
-    # print(translit(ttt, 'ru', reversed=True))
-    # print(translit(ttte, 'ru'))
+    while True:
+        in_text = input_text()
+        print(my_translit(in_text))
+        cont_exit = input("Press 'Q' to exit, any key to continue")
+        if cont_exit == 'q':
+            break
