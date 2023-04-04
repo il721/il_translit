@@ -4,20 +4,10 @@ import re
 import unicodedata
 
 
-from .exceptions import (
-    ImproperlyConfigured,
-    InvalidRegistryItemType
-)
-
-__title__ = 'transliterate.base'
-__author__ = 'Artur Barseghyan'
-__copyright__ = '2013-2018 Artur Barseghyan'
-__license__ = 'GPL 2.0/LGPL 2.1'
-__all__ = (
-    'registry',
-    'TranslitLanguagePack',
-)
-
+# from .exceptions import (
+#     ImproperlyConfigured,
+#     InvalidRegistryItemType
+# )
 
 class TranslitLanguagePack(object):
     """Base language pack.
@@ -114,16 +104,16 @@ class TranslitLanguagePack(object):
     reversed_characters = None
 
     def __init__(self):
-        try:
-            assert self.language_code is not None
-            assert self.language_name is not None
-            assert self.mapping
-        except AssertionError:
-            raise ImproperlyConfigured(
-                "You should define ``language_code``, ``language_name`` and "
-                "``mapping`` properties in your subclassed "
-                "``TranslitLanguagePack`` class."
-            )
+        # try:
+        #     assert self.language_code is not None
+        #     assert self.language_name is not None
+        #     assert self.mapping
+        # except AssertionError:
+        #     raise ImproperlyConfigured(
+        #         "You should define ``language_code``, ``language_name`` and "
+        #         "``mapping`` properties in your subclassed "
+        #         "``TranslitLanguagePack`` class."
+        #     )
 
         super(TranslitLanguagePack, self).__init__()
 
@@ -302,84 +292,84 @@ class TranslitLanguagePack(object):
         """
 
 
-class TranslitRegistry(object):
-    """Language pack registry."""
-
-    def __init__(self):
-        self._registry = {}
-        self._forced = []
-
-    @property
-    def registry(self):
-        """Registry."""
-        return self._registry
-
-    def register(self, cls, force=False):
-        """Register the language pack in the registry.
-
-        :param transliterate.base.LanguagePack cls: Subclass of
-            ``transliterate.base.LanguagePack``.
-        :param bool force: If set to True, item stays forced. It's not possible
-            to un-register a forced item.
-        :return bool: True if registered and False otherwise.
-        """
-        if not issubclass(cls, TranslitLanguagePack):
-            raise InvalidRegistryItemType(
-                "Invalid item type `%s` for registry `%s`",
-                cls,
-                self.__class__
-            )
-
-        # If item has not been forced yet, add/replace its' value in the
-        # registry.
-        if force:
-
-            if cls.language_code not in self._forced:
-                self._registry[cls.language_code] = cls
-                self._forced.append(cls.language_code)
-                return True
-            else:
-                return False
-
-        else:
-
-            if cls.language_code in self._registry:
-                return False
-            else:
-                self._registry[cls.language_code] = cls
-                return True
-
-    def unregister(self, cls):
-        """Un-registers an item from registry.
-
-        :param transliterate.base.LanguagePack cls: Subclass of
-            ``transliterate.base.LanguagePack``.
-        :return bool: True if unregistered and False otherwise.
-        """
-        if not issubclass(cls, TranslitLanguagePack):
-            raise InvalidRegistryItemType(
-                "Invalid item type `%s` for registry `%s`",
-                cls,
-                self.__class__
-            )
-
-        # Only non-forced items are allowed to be unregistered.
-        if cls.language_code in self._registry \
-                and cls.language_code not in self._forced:
-
-            self._registry.pop(cls.language_code)
-            return True
-        else:
-            return False
-
-    def get(self, language_code, default=None):
-        """Get the given language pack from the registry.
-
-        :param str language_code:
-        :return transliterate.base.LanguagePack: Subclass of
-            ``transliterate.base.LanguagePack``.
-        """
-        return self._registry.get(language_code, default)
+# class TranslitRegistry(object):
+#     """Language pack registry."""
+#
+#     def __init__(self):
+#         self._registry = {}
+#         self._forced = []
+#
+#     @property
+#     def registry(self):
+#         """Registry."""
+#         return self._registry
+#
+#     def register(self, cls, force=False):
+#         """Register the language pack in the registry.
+#
+#         :param transliterate.base.LanguagePack cls: Subclass of
+#             ``transliterate.base.LanguagePack``.
+#         :param bool force: If set to True, item stays forced. It's not possible
+#             to un-register a forced item.
+#         :return bool: True if registered and False otherwise.
+#         """
+#         if not issubclass(cls, TranslitLanguagePack):
+#             raise InvalidRegistryItemType(
+#                 "Invalid item type `%s` for registry `%s`",
+#                 cls,
+#                 self.__class__
+#             )
+#
+#         # If item has not been forced yet, add/replace its' value in the
+#         # registry.
+#         if force:
+#
+#             if cls.language_code not in self._forced:
+#                 self._registry[cls.language_code] = cls
+#                 self._forced.append(cls.language_code)
+#                 return True
+#             else:
+#                 return False
+#
+#         else:
+#
+#             if cls.language_code in self._registry:
+#                 return False
+#             else:
+#                 self._registry[cls.language_code] = cls
+#                 return True
+#
+#     def unregister(self, cls):
+#         """Un-registers an item from registry.
+#
+#         :param transliterate.base.LanguagePack cls: Subclass of
+#             ``transliterate.base.LanguagePack``.
+#         :return bool: True if unregistered and False otherwise.
+#         """
+#         if not issubclass(cls, TranslitLanguagePack):
+#             raise InvalidRegistryItemType(
+#                 "Invalid item type `%s` for registry `%s`",
+#                 cls,
+#                 self.__class__
+#             )
+#
+#         # Only non-forced items are allowed to be unregistered.
+#         if cls.language_code in self._registry \
+#                 and cls.language_code not in self._forced:
+#
+#             self._registry.pop(cls.language_code)
+#             return True
+#         else:
+#             return False
+#
+#     def get(self, language_code, default=None):
+#         """Get the given language pack from the registry.
+#
+#         :param str language_code:
+#         :return transliterate.base.LanguagePack: Subclass of
+#             ``transliterate.base.LanguagePack``.
+#         """
+#         return self._registry.get(language_code, default)
 
 
 # Register languages by calling registry.register()
