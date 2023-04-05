@@ -104,16 +104,6 @@ class TranslitLanguagePack(object):
     reversed_characters = None
 
     def __init__(self):
-        # try:
-        #     assert self.language_code is not None
-        #     assert self.language_name is not None
-        #     assert self.mapping
-        # except AssertionError:
-        #     raise ImproperlyConfigured(
-        #         "You should define ``language_code``, ``language_name`` and "
-        #         "``mapping`` properties in your subclassed "
-        #         "``TranslitLanguagePack`` class."
-        #     )
 
         super(TranslitLanguagePack, self).__init__()
 
@@ -134,7 +124,7 @@ class TranslitLanguagePack(object):
                 zip(
                     self.pre_processor_mapping.values(),
                     self.pre_processor_mapping.keys())
-                )
+            )
             self.pre_processor_mapping_keys = self.pre_processor_mapping.keys()
             self.reversed_pre_processor_mapping_keys = \
                 self.pre_processor_mapping.values()
@@ -165,42 +155,18 @@ class TranslitLanguagePack(object):
             self._reversed_characters = \
                 '[^{0}]'.format('\\'.join(list(self.characters)))
 
-    def translit(self, value, reversed=False, strict=False,
+    def translit(self, value, strict=False,
                  fail_silently=True):
         """Transliterate the given value according to the rules.
 
         Rules are set in the transliteration pack.
 
         :param str value:
-        :param bool reversed:
         :param bool strict:
         :param bool fail_silently:
         :return str:
         """
 
-        if reversed:
-            # Handling reversed specific translations (one side only).
-            if self.reversed_specific_mapping:
-                value = value.translate(
-                    self.reversed_specific_translation_table
-                )
-
-            if self.reversed_specific_pre_processor_mapping:
-                for rule in self.reversed_specific_pre_processor_mapping_keys:
-                    value = value.replace(
-                        rule,
-                        self.reversed_specific_pre_processor_mapping[rule]
-                    )
-
-            # Handling pre-processor mappings.
-            if self.reversed_pre_processor_mapping:
-                for rule in self.reversed_pre_processor_mapping_keys:
-                    value = value.replace(
-                        rule,
-                        self.reversed_pre_processor_mapping[rule]
-                    )
-
-            return value.translate(self.reversed_translation_table)
 
         if self.pre_processor_mapping:
             for rule in self.pre_processor_mapping_keys:
@@ -208,9 +174,7 @@ class TranslitLanguagePack(object):
         res = value.translate(self.translation_table)
 
         if strict:
-            res = self._make_strict(value=res,
-                                    reversed=reversed,
-                                    fail_silently=fail_silently)
+            res = self._make_strict(value=res, fail_silently=fail_silently)
 
         return res
 
@@ -269,27 +233,6 @@ class TranslitLanguagePack(object):
                 if char_num >= range_lower and char_num <= range_upper:
                     return True
         return False
-
-    @classmethod
-    def suggest(value, reversed=False, limit=None):
-        """Suggest possible variants (some sort of auto-complete).
-
-        :param str value:
-        :param int limit: Limit number of suggested variants.
-        :return list:
-        """
-
-    @classmethod
-    def detect(text, num_words=None):
-        """Detect the language.
-
-        Heavy language detection, which is activated for languages that are
-        harder detect (like Russian Cyrillic and Ukrainian Cyrillic).
-
-        :param unicode value: Input string.
-        :param int num_words: Number of words to base decision on.
-        :return bool: True if detected and False otherwise.
-        """
 
 
 # class TranslitRegistry(object):
@@ -373,4 +316,3 @@ class TranslitLanguagePack(object):
 
 
 # Register languages by calling registry.register()
-registry = TranslitRegistry()
