@@ -13,7 +13,7 @@ def input_text() -> str:
 
 def my_translit(in_txt: str) -> str:
     """Transliterate input text and return"""
-    return translit(in_txt, 'ru')
+    return translit(in_txt, 'il_ru')
 
 
 if __name__ == '__main__':

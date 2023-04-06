@@ -14,7 +14,7 @@ class TranslitLanguagePack(object):
 
     The attributes below shall be defined in every language pack.
 
-    ``language_code``: Language code (obligatory). Example value: 'hy', 'ru'.
+    ``language_code``: Language code (obligatory). Example value: 'hy', 'il_ru'.
     ``language_name``: Language name (obligatory). Example value: 'Armenian',
         'Russian'.
     ``character_ranges``: Character ranges that are specific to the language.
