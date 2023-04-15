@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 
 import re
 import unicodedata
@@ -82,7 +81,6 @@ class TranslitLanguagePack(object):
 >>>        u"ու": u"u",
 >>>        u"Ու": u"U"
 >>>    }
-    Note, that in Python 3 you won't be using u prefix before the strings.
     """
 
     language_code = None
