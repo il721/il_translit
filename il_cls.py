@@ -1,6 +1,6 @@
 
 import re
-import unicodedata
+# import unicodedata
 
 
 # from .exceptions import (
