@@ -11,5 +11,4 @@ app = QApplication([])
 window = QWidget()
 window.show()  # Важно: окно по умолчанию скрыто.
 
-# Запускаем цикл событий.
 app.exec()
