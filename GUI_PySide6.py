@@ -9,5 +9,9 @@ class TranslatePySide(QMainWindow):
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
 
+
 if __name__ == '__main__':
-    pass
+    app = QApplication([])
+    window = TranslatePySide()
+    window.show()
+    sys.exit(app.exec())
