@@ -39,21 +39,6 @@ font: 12pt &quot;Tahoma&quot;;</string>
      <string>Input text</string>
     </property>
    </widget>
-   <widget class="QPlainTextEdit" name="input_window">
-    <property name="geometry">
-     <rect>
-      <x>141</x>
-      <y>40</y>
-      <width>640</width>
-      <height>180</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgba(0, 0, 0, 35);
-border: 1px solid rgb(156, 104, 0);
-border-color: rgb(156, 104, 0);</string>
-    </property>
-   </widget>
    <widget class="QPushButton" name="translit_button">
     <property name="geometry">
      <rect>
@@ -395,21 +380,6 @@ li.checked::marker { content: &quot;\2612&quot;; }
      <string>Output text</string>
     </property>
    </widget>
-   <widget class="QPlainTextEdit" name="output_window">
-    <property name="geometry">
-     <rect>
-      <x>141</x>
-      <y>303</y>
-      <width>640</width>
-      <height>180</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgba(0, 0, 0, 35);
-border: 1px solid rgb(156, 104, 0);
-border-color: rgb(156, 104, 0);</string>
-    </property>
-   </widget>
    <widget class="QPushButton" name="clear_button">
     <property name="geometry">
      <rect>
@@ -435,6 +405,45 @@ border-color: rgb(156, 104, 0);</string>
       <width>24</width>
       <height>24</height>
      </size>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="input_window">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>40</y>
+      <width>641</width>
+      <height>171</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(0, 0, 0, 35);
+border: 1px solid rgb(156, 104, 0);
+border-color: rgb(156, 104, 0);</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="output_window">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>300</y>
+      <width>641</width>
+      <height>181</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(0, 0, 0, 35);
+border: 1px solid rgb(156, 104, 0);
+border-color: rgb(156, 104, 0);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
     </property>
    </widget>
   </widget>

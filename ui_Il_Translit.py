@@ -15,7 +15,7 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QLabel, QMainWindow, QPlainTextEdit,
+from PySide6.QtWidgets import (QApplication, QLabel, QLineEdit, QMainWindow,
     QPushButton, QSizePolicy, QTextBrowser, QWidget)
 import icon_01
 
@@ -37,12 +37,6 @@ class Ui_MainWindow(object):
         self.label.setObjectName(u"label")
         self.label.setGeometry(QRect(141, 10, 69, 19))
         self.label.setStyleSheet(u"color: rgb(202, 202, 202);")
-        self.input_window = QPlainTextEdit(self.centralwidget)
-        self.input_window.setObjectName(u"input_window")
-        self.input_window.setGeometry(QRect(141, 40, 640, 180))
-        self.input_window.setStyleSheet(u"background-color: rgba(0, 0, 0, 35);\n"
-"border: 1px solid rgb(156, 104, 0);\n"
-"border-color: rgb(156, 104, 0);")
         self.translit_button = QPushButton(self.centralwidget)
         self.translit_button.setObjectName(u"translit_button")
         self.translit_button.setGeometry(QRect(141, 226, 520, 41))
@@ -145,12 +139,6 @@ class Ui_MainWindow(object):
         self.label_2.setObjectName(u"label_2")
         self.label_2.setGeometry(QRect(141, 278, 80, 19))
         self.label_2.setStyleSheet(u"color: rgb(202, 202, 202);")
-        self.output_window = QPlainTextEdit(self.centralwidget)
-        self.output_window.setObjectName(u"output_window")
-        self.output_window.setGeometry(QRect(141, 303, 640, 180))
-        self.output_window.setStyleSheet(u"background-color: rgba(0, 0, 0, 35);\n"
-"border: 1px solid rgb(156, 104, 0);\n"
-"border-color: rgb(156, 104, 0);")
         self.clear_button = QPushButton(self.centralwidget)
         self.clear_button.setObjectName(u"clear_button")
         self.clear_button.setGeometry(QRect(670, 226, 111, 41))
@@ -160,6 +148,20 @@ class Ui_MainWindow(object):
         icon1.addFile(u":/icon_01/icons/delete_white_24dp.svg", QSize(), QIcon.Normal, QIcon.Off)
         self.clear_button.setIcon(icon1)
         self.clear_button.setIconSize(QSize(24, 24))
+        self.input_window = QLineEdit(self.centralwidget)
+        self.input_window.setObjectName(u"input_window")
+        self.input_window.setGeometry(QRect(140, 40, 641, 171))
+        self.input_window.setStyleSheet(u"background-color: rgba(0, 0, 0, 35);\n"
+"border: 1px solid rgb(156, 104, 0);\n"
+"border-color: rgb(156, 104, 0);")
+        self.input_window.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
+        self.output_window = QLabel(self.centralwidget)
+        self.output_window.setObjectName(u"output_window")
+        self.output_window.setGeometry(QRect(140, 300, 641, 181))
+        self.output_window.setStyleSheet(u"background-color: rgba(0, 0, 0, 35);\n"
+"border: 1px solid rgb(156, 104, 0);\n"
+"border-color: rgb(156, 104, 0);")
+        self.output_window.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
@@ -261,5 +263,6 @@ class Ui_MainWindow(object):
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">\u0449   sch</p></body></html>", None))
         self.label_2.setText(QCoreApplication.translate("MainWindow", u"Output text", None))
         self.clear_button.setText(QCoreApplication.translate("MainWindow", u"Clear", None))
+        self.output_window.setText("")
     # retranslateUi
 
