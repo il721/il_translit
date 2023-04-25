@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 mapping = (
-    u"abvgdezijklmnoprstufhcC~y'ABVGDEZIJKLMNOPRSTUFH'Y'",
+    u"abvgdezijklmnoprstufhcC~y'ABVGDEZIJKLMNOPRSTUFH~Y'",
     u"абвгдезийклмнопрстуфхцЦъыьАБВГДЕЗИЙКЛМНОПРСТУФХЪЫЬ",
 )
 
