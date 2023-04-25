@@ -9,10 +9,14 @@ class TranslatePySide(QMainWindow):
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
         self.ui.translit_button.clicked.connect(self.input_text)
+        self.ui.clear_button.clicked.connect(self.clear_in_text)
 
     def input_text(self):
         text_in = self.ui.input_window.text()
         self.ui.output_window.setText(text_in)
+
+    def clear_in_text(self):
+        self.ui.input_window.clear()
 
 
 if __name__ == '__main__':
