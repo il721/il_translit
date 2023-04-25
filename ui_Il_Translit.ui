@@ -54,7 +54,7 @@ font: 12pt &quot;Tahoma&quot;;</string>
 background-color: rgb(156, 104, 0);</string>
     </property>
     <property name="text">
-     <string>Translit</string>
+     <string>Translit and copy to clipboard</string>
     </property>
     <property name="icon">
      <iconset resource="icon_01.qrc">
@@ -71,7 +71,7 @@ background-color: rgb(156, 104, 0);</string>
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>120</y>
+      <y>100</y>
       <width>90</width>
       <height>41</height>
      </rect>
@@ -98,7 +98,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>80</y>
+      <y>60</y>
       <width>90</width>
       <height>41</height>
      </rect>
@@ -125,7 +125,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>40</y>
+      <y>20</y>
       <width>90</width>
       <height>41</height>
      </rect>
@@ -152,7 +152,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>240</y>
+      <y>220</y>
       <width>90</width>
       <height>41</height>
      </rect>
@@ -172,14 +172,14 @@ hr { height: 1px; border-width: 0; }
 li.unchecked::marker { content: &quot;\2610&quot;; }
 li.checked::marker { content: &quot;\2612&quot;; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Tahoma'; font-size:18pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;й      j&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;й       j&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
    <widget class="QTextBrowser" name="textBrowser_8">
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>160</y>
+      <y>140</y>
       <width>90</width>
       <height>41</height>
      </rect>
@@ -206,7 +206,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>200</y>
+      <y>180</y>
       <width>90</width>
       <height>41</height>
      </rect>
@@ -233,7 +233,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>360</y>
+      <y>380</y>
       <width>90</width>
       <height>41</height>
      </rect>
@@ -253,14 +253,14 @@ hr { height: 1px; border-width: 0; }
 li.unchecked::marker { content: &quot;\2610&quot;; }
 li.checked::marker { content: &quot;\2612&quot;; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Tahoma'; font-size:18pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;ч    ch&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;ч     ch&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
    <widget class="QTextBrowser" name="textBrowser_11">
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>400</y>
+      <y>420</y>
       <width>90</width>
       <height>41</height>
      </rect>
@@ -287,7 +287,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>440</y>
+      <y>460</y>
       <width>90</width>
       <height>41</height>
      </rect>
@@ -314,7 +314,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>280</y>
+      <y>260</y>
       <width>90</width>
       <height>41</height>
      </rect>
@@ -341,7 +341,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>320</y>
+      <y>300</y>
       <width>90</width>
       <height>41</height>
      </rect>
@@ -368,7 +368,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
     <property name="geometry">
      <rect>
       <x>141</x>
-      <y>278</y>
+      <y>298</y>
       <width>80</width>
       <height>19</height>
      </rect>
@@ -429,7 +429,7 @@ border-color: rgb(156, 104, 0);</string>
     <property name="geometry">
      <rect>
       <x>140</x>
-      <y>300</y>
+      <y>320</y>
       <width>641</width>
       <height>181</height>
      </rect>
@@ -444,6 +444,33 @@ border-color: rgb(156, 104, 0);</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="textBrowser_15">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>340</y>
+      <width>90</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(156, 104, 0);
+font: 18pt &quot;Tahoma&quot;;
+background-color: rgba(0, 0, 0, 35);
+border: 1px solid rgb(156, 104, 0);
+border-color: rgb(156, 104, 0);</string>
+    </property>
+    <property name="html">
+     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Tahoma'; font-size:18pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;ц     ts&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
   </widget>
