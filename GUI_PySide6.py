@@ -10,6 +10,8 @@ class TranslatePySide(QMainWindow):
         super().__init__()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
+        self.ui.translit_button.setShortcut('Ctrl+t')
+        self.ui.clear_button.setShortcut('Ctrl+d')
         self.ui.translit_button.clicked.connect(self.translit_in_text)
         self.ui.clear_button.clicked.connect(self.clear_in_text)
 
@@ -17,7 +19,7 @@ class TranslatePySide(QMainWindow):
         """
         Translit and copy to clipboard input text
         """
-        text_in = self.ui.input_window.text()
+        text_in = self.ui.input_window.toPlainText()
         text_out = translit(text_in, 'ru')
         pc.copy(text_out)
         self.ui.output_window.setText(text_out)

@@ -1,9 +1,13 @@
 # -*- coding: utf-8 -*-
 
 mapping = (
-    "abvgdezijklmnoprstufhcC~y'ABVGDEZIJKLMNOPRSTUFH~Y'",
-    "абвгдезийклмнопрстуфхцЦъыьАБВГДЕЗИЙКЛМНОПРСТУФХЪЫЬ",
+    "abvgdezijklmnoprstufhcC~y'ABVGDEZIJKLMNOPRSTUFHY",
+    "абвгдезийклмнопрстуфхцЦъыьАБВГДЕЗИЙКЛМНОПРСТУФХЫ",
 )
+# mapping = (
+#     u"abvgdezijklmnoprstufhcC'y'ABVGDEZIJKLMNOPRSTUFH'Y'",
+#     u"абвгдезийклмнопрстуфхцЦъыьАБВГДЕЗИЙКЛМНОПРСТУФХЪЫЬ",
+# )
 
 reversed_specific_mapping = (
     u"ёэЁЭъьЪЬ",

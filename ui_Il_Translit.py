@@ -15,7 +15,7 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QLabel, QLineEdit, QMainWindow,
+from PySide6.QtWidgets import (QApplication, QLabel, QMainWindow, QPlainTextEdit,
     QPushButton, QSizePolicy, QTextBrowser, QWidget)
 import icon_01_rc
 
@@ -35,11 +35,11 @@ class Ui_MainWindow(object):
         self.centralwidget.setObjectName(u"centralwidget")
         self.label = QLabel(self.centralwidget)
         self.label.setObjectName(u"label")
-        self.label.setGeometry(QRect(141, 10, 69, 19))
+        self.label.setGeometry(QRect(141, 20, 69, 19))
         self.label.setStyleSheet(u"color: rgb(202, 202, 202);")
         self.translit_button = QPushButton(self.centralwidget)
         self.translit_button.setObjectName(u"translit_button")
-        self.translit_button.setGeometry(QRect(141, 226, 520, 41))
+        self.translit_button.setGeometry(QRect(141, 226, 431, 41))
         self.translit_button.setStyleSheet(u"color: rgb(221, 221, 221);\n"
 "\n"
 "background-color: rgb(156, 104, 0);")
@@ -141,20 +141,13 @@ class Ui_MainWindow(object):
         self.label_2.setStyleSheet(u"color: rgb(202, 202, 202);")
         self.clear_button = QPushButton(self.centralwidget)
         self.clear_button.setObjectName(u"clear_button")
-        self.clear_button.setGeometry(QRect(670, 226, 111, 41))
+        self.clear_button.setGeometry(QRect(580, 226, 201, 41))
         self.clear_button.setStyleSheet(u"color: rgb(221, 221, 221);\n"
 "")
         icon1 = QIcon()
         icon1.addFile(u":/icon_01/icons/delete_white_24dp.svg", QSize(), QIcon.Normal, QIcon.Off)
         self.clear_button.setIcon(icon1)
         self.clear_button.setIconSize(QSize(24, 24))
-        self.input_window = QLineEdit(self.centralwidget)
-        self.input_window.setObjectName(u"input_window")
-        self.input_window.setGeometry(QRect(140, 40, 641, 171))
-        self.input_window.setStyleSheet(u"background-color: rgba(0, 0, 0, 35);\n"
-"border: 1px solid rgb(156, 104, 0);\n"
-"border-color: rgb(156, 104, 0);")
-        self.input_window.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
         self.output_window = QLabel(self.centralwidget)
         self.output_window.setObjectName(u"output_window")
         self.output_window.setGeometry(QRect(140, 320, 641, 181))
@@ -170,6 +163,12 @@ class Ui_MainWindow(object):
 "background-color: rgba(0, 0, 0, 35);\n"
 "border: 1px solid rgb(156, 104, 0);\n"
 "border-color: rgb(156, 104, 0);")
+        self.input_window = QPlainTextEdit(self.centralwidget)
+        self.input_window.setObjectName(u"input_window")
+        self.input_window.setGeometry(QRect(140, 40, 640, 170))
+        self.input_window.setStyleSheet(u"background-color: rgba(0, 0, 0, 35);\n"
+"border: 1px solid rgb(156, 104, 0);\n"
+"border-color: rgb(156, 104, 0);")
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
@@ -180,7 +179,7 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"Translit", None))
         self.label.setText(QCoreApplication.translate("MainWindow", u"Input text", None))
-        self.translit_button.setText(QCoreApplication.translate("MainWindow", u"Translit and copy to clipboard", None))
+        self.translit_button.setText(QCoreApplication.translate("MainWindow", u"Translit and copy to clipboard      (Ctrl + t)", None))
         self.textBrowser_4.setHtml(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
@@ -270,7 +269,7 @@ class Ui_MainWindow(object):
 "</style></head><body style=\" font-family:'Tahoma'; font-size:18pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">\u0449   sch</p></body></html>", None))
         self.label_2.setText(QCoreApplication.translate("MainWindow", u"Output text", None))
-        self.clear_button.setText(QCoreApplication.translate("MainWindow", u"Clear", None))
+        self.clear_button.setText(QCoreApplication.translate("MainWindow", u"Clear     (Ctrl + d)", None))
         self.output_window.setText("")
         self.textBrowser_15.setHtml(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
