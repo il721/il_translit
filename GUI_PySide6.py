@@ -12,10 +12,10 @@ class TranslatePySide(QMainWindow):
         self.ui.setupUi(self)
         self.ui.translit_button.setShortcut('Ctrl+t')
         self.ui.clear_button.setShortcut('Ctrl+d')
-        self.ui.translit_button.clicked.connect(self.translit_in_text)
-        self.ui.clear_button.clicked.connect(self.clear_in_text)
+        self.ui.translit_button.clicked.connect(self.translit_input_text)
+        self.ui.clear_button.clicked.connect(self.clear_all_windows)
 
-    def translit_in_text(self) -> None:
+    def translit_input_text(self) -> None:
         """
         Translit and copy to clipboard input text
         """
@@ -24,7 +24,7 @@ class TranslatePySide(QMainWindow):
         pc.copy(text_out)
         self.ui.output_window.setText(text_out)
 
-    def clear_in_text(self) -> None:
+    def clear_all_windows(self) -> None:
         """
         Clear text in input/output window when press button clear
         """
