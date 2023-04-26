@@ -54,7 +54,7 @@ font: 12pt &quot;Tahoma&quot;;</string>
 background-color: rgb(156, 104, 0);</string>
     </property>
     <property name="text">
-     <string>Translit and copy to clipboard      (Ctrl + t)</string>
+     <string>Translit and copy to clipboard      (Ctrl + T)</string>
     </property>
     <property name="icon">
      <iconset resource="icon_01.qrc">
@@ -394,7 +394,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
 </string>
     </property>
     <property name="text">
-     <string>Clear     (Ctrl + d)</string>
+     <string>Clear     (Ctrl + D)</string>
     </property>
     <property name="icon">
      <iconset resource="icon_01.qrc">
