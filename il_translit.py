@@ -1,33 +1,39 @@
-def translit(value, language_code=None, reversed=False, strict=False):
-    """Transliterate the text for the language given.
+import sys
+from PySide6.QtWidgets import QApplication, QMainWindow
+from ui_Il_Translit import Ui_MainWindow
+from base import translit
+import pyperclip as pc
 
-    Language code is optional in case of reversed translations (from some
-    script to latin).
 
-    :param str value:
-    :param str language_code:
-    :param bool reversed: If set to True, reversed translation is made.
-    :param bool strict: If given, all that are not found in the
-        transliteration pack, are simply stripped out.
-    :return str:
-    """
-    ensure_autodiscover()
+class PySideMainWindow(QMainWindow):
+    def __init__(self):
+        super().__init__()
+        self.ui = Ui_MainWindow()
+        self.ui.setupUi(self)
+        self.ui.translit_button.setShortcut('Ctrl+t')
+        self.ui.clear_button.setShortcut('Ctrl+d')
+        self.ui.translit_button.clicked.connect(self.translit_input_text)
+        self.ui.clear_button.clicked.connect(self.clear_all_windows)
 
-    if language_code is None and reversed is False:
-        raise LanguageCodeError(
-            _("``language_code`` is optional with ``reversed`` set to True "
-              "only.")
-        )
+    def translit_input_text(self) -> None:
+        """
+        Translit and copy to clipboard input text
+        """
+        text_in = self.ui.input_window.toPlainText()
+        text_out = translit(text_in)
+        pc.copy(text_out)
+        self.ui.output_window.setText(text_out)
 
-    if language_code is None:
-        language_code = detect_language(value, fail_silently=False)
+    def clear_all_windows(self) -> None:
+        """
+        Clear text in input/output window when press button clear
+        """
+        self.ui.input_window.clear()
+        self.ui.output_window.clear()
 
-    cls = registry.get(language_code)
 
-    if cls is None:
-        raise LanguagePackNotFound(
-            _("Language pack for code %s is not found." % language_code)
-        )
-
-    language_pack = cls()
-    return language_pack.translit(value, reversed=reversed, strict=strict)
+if __name__ == '__main__':
+    app = QApplication([])
+    window = PySideMainWindow()
+    window.show()
+    sys.exit(app.exec())

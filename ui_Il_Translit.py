@@ -179,7 +179,7 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"Translit", None))
         self.label.setText(QCoreApplication.translate("MainWindow", u"Input text", None))
-        self.translit_button.setText(QCoreApplication.translate("MainWindow", u"Translit and copy to clipboard      (Ctrl + t)", None))
+        self.translit_button.setText(QCoreApplication.translate("MainWindow", u"Translit and copy to clipboard      (Ctrl + T)", None))
         self.textBrowser_4.setHtml(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
@@ -251,7 +251,7 @@ class Ui_MainWindow(object):
 "li.unchecked::marker { content: \"\\2610\"; }\n"
 "li.checked::marker { content: \"\\2612\"; }\n"
 "</style></head><body style=\" font-family:'Tahoma'; font-size:18pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">\u044a      ~</p></body></html>", None))
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">\u044a      w</p></body></html>", None))
         self.textBrowser_13.setHtml(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
@@ -269,7 +269,7 @@ class Ui_MainWindow(object):
 "</style></head><body style=\" font-family:'Tahoma'; font-size:18pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">\u0449   sch</p></body></html>", None))
         self.label_2.setText(QCoreApplication.translate("MainWindow", u"Output text", None))
-        self.clear_button.setText(QCoreApplication.translate("MainWindow", u"Clear     (Ctrl + d)", None))
+        self.clear_button.setText(QCoreApplication.translate("MainWindow", u"Clear     (Ctrl + D)", None))
         self.output_window.setText("")
         self.textBrowser_15.setHtml(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
