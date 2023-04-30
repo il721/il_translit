@@ -8,7 +8,6 @@ reversed_pre_processor_mapping_keys = []
 reversed_specific_pre_processor_mapping = None
 reversed_specific_pre_processor_mapping_keys = []
 
-pre_processor_mapping = None
 pre_processor_mapping_keys = []
 
 detectable = False
@@ -17,10 +16,14 @@ reversed_characters = None
 
 # Creating a translation table from the mapping set.
 translation_table = {}
+
+
 mapping = (
     "abvgdezijklmnoprstufhcC~y'wABVGDEZIJKLMNOPRSTUFHYW",
     "абвгдезийклмнопрстуфхцЦъыьъАБВГДЕЗИЙКЛМНОПРСТУФХЫЪ",
 )
+
+
 pre_processor_mapping = {
     "zh": u"ж",
     "ts": u"ц",
@@ -42,28 +45,6 @@ pre_processor_mapping = {
 
 for key, val in zip(*mapping):
     translation_table.update({ord(key): ord(val)})
-
-# reversing pre-processor for later use.
-# reversed_pre_processor_mapping = dict(
-#     zip(
-#         pre_processor_mapping.values(),
-#         pre_processor_mapping.keys())
-# )
-# pre_processor_mapping_keys = pre_processor_mapping.keys()
-# reversed_pre_processor_mapping_keys = \
-#     pre_processor_mapping.values()
-
-# _characters = '[^]'
-#
-# if characters is not None:
-#     _characters = '[^{0}]'.format(
-#         '\\'.join(list(characters))
-#     )
-#
-# _reversed_characters = '[^]'
-# if reversed_characters is not None:
-#     _reversed_characters = \
-#         '[^{0}]'.format('\\'.join(list(characters)))
 
 
 def translit(value):
