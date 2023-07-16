@@ -57,7 +57,7 @@ background-color: rgb(156, 104, 0);</string>
      <string>Translit and copy to clipboard      (Ctrl + T)</string>
     </property>
     <property name="icon">
-     <iconset resource="icon_01.qrc">
+     <iconset resource="icon_01_rc.qrc">
       <normaloff>:/icon_01/icons/post_add_white_24dp.svg</normaloff>:/icon_01/icons/post_add_white_24dp.svg</iconset>
     </property>
     <property name="iconSize">
@@ -361,7 +361,7 @@ hr { height: 1px; border-width: 0; }
 li.unchecked::marker { content: &quot;\2610&quot;; }
 li.checked::marker { content: &quot;\2612&quot;; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Tahoma'; font-size:18pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;щ   sch&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;щ   sss&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_2">
@@ -397,7 +397,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
      <string>Clear     (Ctrl + D)</string>
     </property>
     <property name="icon">
-     <iconset resource="icon_01.qrc">
+     <iconset resource="icon_01_rc.qrc">
       <normaloff>:/icon_01/icons/delete_white_24dp.svg</normaloff>:/icon_01/icons/delete_white_24dp.svg</iconset>
     </property>
     <property name="iconSize">
@@ -473,7 +473,7 @@ border-color: rgb(156, 104, 0);</string>
   </widget>
  </widget>
  <resources>
-  <include location="icon_01.qrc"/>
+  <include location="icon_01_rc.qrc"/>
  </resources>
  <connections/>
 </ui>

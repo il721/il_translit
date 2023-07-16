@@ -267,7 +267,8 @@ class Ui_MainWindow(object):
 "li.unchecked::marker { content: \"\\2610\"; }\n"
 "li.checked::marker { content: \"\\2612\"; }\n"
 "</style></head><body style=\" font-family:'Tahoma'; font-size:18pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">\u0449   sch</p></body></html>", None))
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; "
+                                                                             "-qt-block-indent:0; text-indent:0px;\">\u0449   sss</p></body></html>", None))
         self.label_2.setText(QCoreApplication.translate("MainWindow", u"Output text", None))
         self.clear_button.setText(QCoreApplication.translate("MainWindow", u"Clear     (Ctrl + D)", None))
         self.output_window.setText("")
